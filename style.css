@@ -1,0 +1,377 @@
+*{
+  margin: 0px;
+}
+body,html{
+  overflow: Scroll;
+  height: 100%;
+  user-select: none;
+  position: relative;
+  scroll-behavior: smooth;
+  font-family: Sans-Serif,Arial,Verdana;
+}
+
+ .container{
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: scroll;
+}
+
+.intro{
+  height: 100%;
+  padding: 20px;
+}
+.main{
+  border-radius: 20px;
+  height: calc(100% - 40px);
+  background-image:linear-gradient(rgba(0,0,0,.5),black) ,url(my.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  display: flex;
+  color:white;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  box-shadow: 1px 2px 10px black;
+  animation: fadeout .8s 1 ease;
+}
+@keyframes fadeout{
+  0%{
+    opacity: .7;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.svg{
+  height:40%;
+  background:rgb(239,183,0);
+  position: absolute;
+  top:0px;
+  width:100%;
+  z-index: -1;
+  border-radius: 0 0 60% 15%;
+  animation: fadeoutSvg 1s 1  ease;
+}
+@keyframes fadeoutSvg{
+  0%{
+    transform: translateY(-150px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.main div{
+  font-weight: 280;
+  font-size: x-large;
+  line-height: 33px;
+}
+.main div b{
+  font-weight: 400;
+  text-shadow: 1px 1px 10px white;
+}
+ .main div span{
+   color:orange;
+ }
+ .btn{
+   padding:10px 30px;
+   border: none;
+   border-radius: 5px;
+   border:1px inset red;
+   background:inherit;
+   color:red;
+   box-shadow: 1px 1px 5px red;
+   margin-top: 10px;
+   transition: all .07s ease;
+ }
+ .main button{
+   position: absolute;
+   bottom:30px;
+ }
+ .btn:active{
+   background:red;
+   color:white;
+ }
+ 
+ 
+ 
+ .about{
+   display: relative;
+   z-index: 2;
+   width:80%;
+   margin:auto;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   border-radius: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   overflow: hidden;
+    }
+ .about p{
+   color:rgb(40,40,40,.8);
+   line-height: 20px;
+   display: block;
+   padding: 20px;
+   font-size: small;
+ }
+ .about p b{
+   color: black;
+   font-size: medium;
+ }
+ .about div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .mypic{
+   width:200px;
+   padding: 10px 5px 0px 0px;
+   border-radius: 50%;
+   background:dodgerblue;
+ }
+ .text{
+   font-size: 25px;
+   text-align: center;
+   margin-top: 20px;
+   color: darkblue;
+   text-decoration: underline;
+   text-decoration-color: darkblue;
+   text-underline-offset: 5px;
+ }
+ q{
+   margin: 20px;
+   display: block;
+   padding: 5px;
+   color: darkblue;
+   font-weight: bold;
+   font-size:large;
+   text-align: center;
+   quotes: "❝ " "❞";
+ }
+ .skills{
+   box-shadow: 1px 2px 10px grey;
+    background:rgba(239,183,0,0.7);
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 16px;
+ }
+ .skills table{
+   width:60%;
+   margin:auto;
+   margin-top: 10px;
+ }
+ 
+ .skills table td{
+   border-bottom: 1px solid pink;
+   padding: 5px;
+   letter-spacing: .5px;
+ }
+  .skills table tr td:first-child{
+    color:rgb(0,70,68);
+   font-weight: 470;
+ }
+
+ .in{
+   color:darkblue;
+ }
+ .ex{
+   color:green;
+ }
+ .beg{
+   color:tomato;
+ }
+ .end{
+   text-align: center;
+   color: darkblue;
+   font-size: large;
+ }
+
+ .works{
+   width:100%;
+   box-sizing: border-box;
+   padding: 15px;
+ }
+  .works article{
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  .works  div{
+    width: 300px;
+     padding: 20px;
+     background: black;
+    margin-right: 10px;
+    box-sizing: border-box;
+    color: tomato;
+    border-radius: 10px;
+    scroll-snap-align: start;
+ }
+ 
+ 
+ 
+ .works h1{
+   font-size: XX-large;
+   text-align: center;
+ }
+ .works b{
+   line-height: 30px;
+ }
+ .works button{
+   box-shadow: none;
+ }
+ 
+ .contact article{
+     display: grid;
+     grid-template-columns:1fr 1fr;
+   }
+ .form,.social{
+   padding-top: 20px;
+   width:60%;
+   margin: auto;
+ }
+ 
+ input,#message{
+   width:100%;
+   padding: 10px 20px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   margin-top: 5px;
+   margin-bottom: 15px;
+   border:1px solid gainsboro;
+ }
+ 
+ #message{
+   height: 70px;
+ }
+ .contact button{
+   box-shadow: none;
+   border: 1px inset darkblue;
+   color: darkblue;
+   transition: all .4s ease;
+ }
+ input:hover,#message:hover{
+   outline: none;
+   border:2px solid dodgerblue;
+ }
+ .contact button:active{
+   background:darkblue;
+   color:white;
+ }
+ 
+ 
+ .footer{
+   background:black;
+   color:#eee;
+   padding: 20px;
+   text-align: center;
+ }
+ @media screen and (max-width:700px){
+  .header b{
+    font-size: 20px;
+  }
+  .main{
+    padding: 20px;
+  }
+  .main div{
+    font-size:27px;
+  }
+   .about{
+     background:white;
+     width:90%;
+     display: block ;
+     box-shadow: 1px 1px 10px white;
+   }
+   .mypic{
+     width:100%;
+     padding: 0px;
+     border-radius:0px;
+   }
+   .skills{
+     padding: 15px;
+     font-size: medium;
+     
+   }
+ .skills .circle{
+   width:200px;
+   height: 200px;
+   border-radius: 50%;
+   background:white;
+   position:fixed;
+   bottom:30px;
+   left:-40%;
+   z-index: -1;
+ }
+   .skills table{
+     width: 90%;
+   }
+   q{
+     font-size: medium;
+     margin: 5px;
+   }
+  
+   .contact article{
+     display: block;
+   }
+   .form,.social{
+     width:80%;
+   }
+   .works div{
+     width:calc(100vw - 45px);
+   }
+ }
+ 
+ 
+.social svg{
+  width:28px;
+  height: 28px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px gainsboro;
+  padding: 10px;
+  background:white;
+  margin-right: 8px;
+}
+
+ 
+ .pro::after{
+   content: "";
+   display: inline-block;
+   height: 23px;
+   background:orange;
+   box-sizing: border-box;
+   padding: .5px;
+   margin-left: 8px;
+   animation: typing 300ms infinite;
+ }
+ .social div{
+   font-size: small;
+   line-height: 18px;
+   color:rgba(40,40,40,.8);
+ }
+ @keyframes typing{
+   0%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+   }
+ }
+ 
+ a{
+   display: inline-block;
+   text-decoration: none;
+ }
+ 
+ 
+ .fadeout{
+   opacity: 0.7;
+   transform: translateY(200px);
+   transition: all 1s ease-out;
+ }
+ 
+.fadein{
+  opacity: 1;
+  transform: translateY(0px);
+}
